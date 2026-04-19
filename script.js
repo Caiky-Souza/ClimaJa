@@ -41,10 +41,10 @@ async function updateData(event){
     console.log(info)
 
     let temperatura = document.querySelector(".temperatura")
-    temperatura.textContent = Math.round(info["temp"]) + "%C"
+    temperatura.textContent = Math.round(info["temp"]) + "°C"
     
     let sensTermica = document.querySelector(".sensacao")
-    sensTermica.textContent = Math.round(info["sens_t"]) + "%C"
+    sensTermica.textContent = Math.round(info["sens_t"]) + "°C"
 
     let umidade = document.querySelector(".umidade")
     umidade.textContent = Math.round(info["umid"]) + "%"

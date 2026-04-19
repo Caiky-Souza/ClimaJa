@@ -86,12 +86,18 @@ nav  {
 section {
     margin:auto;
     max-width:900px;
-    padding-block: 5rem;
+    padding-block: 3.5rem;
     flex-direction: column;
     gap: 2.5rem;
 }
+.main-section > div {
+    display:flex;
+    flex-direction: column;
+    gap: 3rem;
+}
 .prevision-container {
     display:flex;
+    
 }
 .search-container, .prevision-container {
     background-color: var(--primary-color);
@@ -110,14 +116,14 @@ section {
 .search-input {
     box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.075);
     height:3rem;
-    grid-column: 1/4;
+    grid-column: 1/5;
     width:100%;
 }
 .search-button {
     margin:auto;
     width:100%;
     padding:1rem;
-    grid-column: 1/4;
+    grid-column: 1/5;
     transition: 0.1s
 
 }
@@ -172,7 +178,7 @@ button {
 .prevision-container {
     flex-direction: column;
     padding: 1rem;
-    gap:1rem;
+    gap: 7rem;
 }
 .title-container {
     gap:1.5rem;
@@ -191,7 +197,7 @@ button {
     font-size: calc(var(--font-size) * 0.9);
 }
 .container-climalocal {
-    gap: 5rem;
+    gap: 3rem;
 }
 .container-climalocal, .week-day-container {
     display:flex;
