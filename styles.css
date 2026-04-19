@@ -86,7 +86,7 @@ nav  {
 section {
     margin:auto;
     max-width:900px;
-    padding-block: 2.5rem;
+    padding-block: 5rem;
     flex-direction: column;
     gap: 2.5rem;
 }
@@ -120,7 +120,7 @@ section {
 }
 .search-button:hover {
     transform: scale(110%);
-    cursor: grab;
+    cursor: pointer;
 }
 .search-button > p {
     justify-content: center;
@@ -188,7 +188,7 @@ button {
     font-size: calc(var(--font-size) * 0.9);
 }
 .container-climalocal {
-    gap: 4rem;
+    gap: 5rem;
 }
 .container-climalocal, .week-day-container {
     display:flex;
@@ -198,7 +198,7 @@ button {
     padding: 1rem;
 }
 .main-info {
-    font-size: calc(var(--font-size) * 0.75);
+    font-size: calc(var(--font-size) * 1.5);
     gap: 1rem;
 }
 
@@ -233,6 +233,9 @@ button {
     padding:1rem;
     background-color: var(--primary-color);
     transition: 0.2s;
+}
+.result-item:hover {
+    cursor: pointer;
 }
 .result-item:hover, .week-day-container:hover {
     transform: scale(120%);
@@ -294,7 +297,7 @@ button {
         flex-direction: row;
     }
     .symbol-container{
-        max-width: 38%;
+        max-width: 30%;
     }
     .info-container {
         max-width:60%;
