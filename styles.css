@@ -158,7 +158,9 @@ button {
 }
 
 .container-title {
-    font-size: calc(var(--font-size)* 1.2)
+    width:100%;
+    font-size: calc(var(--font-size)* 1.2);
+    text-align:left;
 }
 .week-title {
     font-size: calc(var(--font-size) * 1.2);
@@ -172,7 +174,6 @@ button {
 .title-container {
     gap:3rem;
     flex-direction: column;
-    padding:1rem;
 }
 .title-container h2 {
     text-align: left;
@@ -273,7 +274,7 @@ button {
         display:none;
     }
 }
-@media (min-width:460px){
+@media (min-width:430px){
 
     .search-container {
         grid-template-columns: repeat(4, 1fr);

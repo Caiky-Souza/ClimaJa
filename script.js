@@ -13,9 +13,11 @@ return String.fromCodePoint(...codePoints);
 
 function updateData(button){
     let locName = document.querySelector(".local-name")
-    locName.textContent = button.srcElement.childNodes[1].innerHTML
-    let latitude = button.srcElement.childNodes[2].innerHTML
-    let longitude = button.srcElement.childNodes[3].innerHTML
+    
+    locName.innerHTML = button.target.outerText
+
+    let latitude = button.srcElement.childNodes["2"].innerHTML
+    let longitude = button.srcElement.childNodes["3"].innerHTML
 
     let info = getLocationInfo(latitude,longitude)
     //await getLocationInfo()
@@ -23,9 +25,10 @@ function updateData(button){
     //let name =  
 };
 async function getLocationInfo(latitude, longitude){
-    let promise = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=True`)
+    let promise = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=True&minutely_15=temperature_2m`)
     let response = await promise.json()
     console.log(response)
+  
 };
 
 
@@ -74,7 +77,12 @@ function rmvSearchList(){
 function updateList(result){
     // Atualiza o container
     resultText.innerHTML = `${result}`;
-    document.querySelector(".result-item").addEventListener("click",updateData)
+    let items = document.querySelectorAll(".result-item")
+    items.forEach((el)=>{
+        el.addEventListener("click",updateData)
+
+    })
+    
 };
 
 // Atualiza a lista de locais
