@@ -49,6 +49,8 @@ async function updateData(event){
     let umidade = document.querySelector(".umidade")
     umidade.textContent = Math.round(info["umid"]) + "%"
 
+    let probChuva = document.querySelector(".chuva")
+    probChuva.textContent = Math.round(info["pp"]) + "%"
     let vento = document.querySelector(".vento")
     vento.textContent = Math.round(info["vento"]) + " km/h"
 
@@ -64,7 +66,7 @@ async function updateData(event){
 
 // Função para pegar as informações de um lugar baseado na latitude e longitude
 async function getLocationInfo(latitude, longitude){
-    let promise = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code,sunrise,sunset&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,apparent_temperature,uv_index`)
+    let promise = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code,sunrise,sunset&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,apparent_temperature,precipitation_probability`)
     let response = await promise.json()
     console.log(response)
     return {
@@ -76,7 +78,7 @@ async function getLocationInfo(latitude, longitude){
         "vento": response["hourly"]["wind_speed_10m"][0],
         "nsol": response["daily"]["sunrise"][0].slice(-5),
         "psol": response["daily"]["sunset"][0].slice(-5),
-        "uv": response["hourly"]["temperature_2m"][0]
+        "pp": response["hourly"]["precipitation_probability"][0]
     }
 };
 

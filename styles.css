@@ -21,7 +21,7 @@
   
 }
 .main-part-container {
-    padding:2rem;
+    
 }
 .column {
     flex-direction: column;
@@ -109,12 +109,14 @@ section {
 .search-input {
     box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.075);
     height:3rem;
+    grid-column: 1/4;
     width:100%;
 }
 .search-button {
     margin:auto;
     width:100%;
     padding:1rem;
+    grid-column: 1/4;
     transition: 0.1s
 
 }
@@ -172,7 +174,7 @@ button {
     gap:1rem;
 }
 .title-container {
-    gap:3rem;
+    gap:1.5rem;
     flex-direction: column;
 }
 .title-container h2 {
@@ -181,7 +183,7 @@ button {
 }
 
 .title-container p{
-    font-size: calc(var(--font-size) * 1);
+    font-size: calc(var(--font-size) * 0.9);
     line-height: 30px;
 }
 .tip {
@@ -198,7 +200,7 @@ button {
     padding: 1rem;
 }
 .main-info {
-    font-size: calc(var(--font-size) * 1.5);
+    font-size: calc(var(--font-size) * 1);
     gap: 1rem;
 }
 
@@ -312,6 +314,13 @@ button {
     .search-button {
         grid-column: 4/5;
     }
+    .title-container p{
+    font-size: calc(var(--font-size) * 1);
+}
+    .main-info {
+        font-size: calc(var(--font-size) * 1.5);
+    }
+    
 
 }
 @media (min-width:1000px) {
@@ -319,4 +328,5 @@ button {
     .week-day-container {
         width:20%;
     }
+    
 }    
