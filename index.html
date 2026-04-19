@@ -23,20 +23,10 @@
                 
                 
             </nav>
-        </header>   
+        </header> 
         <main>
             <section class="flex main-section column ">
-                <div class="flex column">
-                    <div class="grid main-part-container search-container wrap">
-                        <input class="search-input" type="text" placeholder="Digite o nome da sua cidade ou local (ex: Rio de Janeiro, BR)">
-                    
-                        <button class="search-button"><img>Procurar</button>
-
-                        <div class="hidden flex results ">
-                        <p class="result-text hidden"></p>
-                    </divb>
-                    </div>
-                    </div>
+                
                     
                     
                     <div class="main-part-container prevision-container">
@@ -44,10 +34,23 @@
                         <h2>Sua Previsão do Tempo Começa Aqui</h2>
                         <p> Previsão atualizada e precisa para qualquer localidade do Brasil</p>
                     </div>
+                    <div class="flex column search-container-part">
+                    <div class="grid main-part-container search-container wrap">
+                        
+                        <input class="search-input" type="text" placeholder="Digite o nome da sua cidade ou local (ex: Rio de Janeiro, BR)">
+                    
+                        <button class="flex search-button"><img><p class="flex center">Procurar</p></button>
 
+                        <div class="flex results hidden">
+                            <p class="result-text"></p>
+                        </div>
+                    </div>
+                   
+                </div>
+                    <p class="container-title">Clima em <span class="local-name">["Nome do local"]</span></p>
                     <div class="flex wrap justify-center container-climalocal">
                         <div class="symbol-container">
-                            <p class="container-title">Clima em <span class="local-name">["Nome do local"]</span></p>
+                            
                             <img class="local-symbol" src="images/incognite.png">
                             <p class="tip">Digite uma cidade acima para ver a previsão</p>
                         </div>
